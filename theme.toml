@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/thisisassy/Academia/blob/master/LICENSE"
 description = ""
 homepage = "http://harukaashiuchi.me/"
-tags = []
+tags = ["responsive","portfolio","academic"]
 features = []
 min_version = "0.41.0"
 
