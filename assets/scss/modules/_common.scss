@@ -1,7 +1,7 @@
 .l-content{
     width: auto;
     margin: 0 16px;
-    @include mq(){
+    @include mq(md){
         width: 1000px;
         margin: auto;
     }
@@ -10,7 +10,7 @@
 .l-main__inner{
     display: flex;
     flex-flow: column;
-    @include mq(){
+    @include mq(md){
         flex-flow: row wrap;
     }
 
