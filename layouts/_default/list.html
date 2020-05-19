@@ -1,6 +1,5 @@
 {{ define "main" }} {{ range .Pages }}
 <article class="archive-entry">
-  <h2>{{ .Title }}</h2>
-  {{ .Content }}
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
 </article>
 {{ end }} {{ end }}

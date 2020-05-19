@@ -1,9 +1,9 @@
-.l-content {
-  width: 1000px;
-  margin: auto;
-  @include mq(sm) {
-    width: auto;
-    margin: 0 16px;
+#l-content {
+  width: auto;
+  margin: 0 16px;
+  @include mq(md) {
+    width: 1000px;
+    margin: auto;
   }
 }
 
