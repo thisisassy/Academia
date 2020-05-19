@@ -1,5 +1,13 @@
 {{ define "main" }} {{ range .Pages }}
-<article class="archive-entry">
-  <a href="{{ .Permalink }}">{{ .Title }}</a>
-</article>
+<section class="archive-entry">
+  <div class="archive-entry-header">
+    <div class="date"><time>{{ .PublishDate }}</time></div>
+    <h1 class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+  </div>
+  <div class="categories">category</div>
+  <a href="{{ .Permalink }}" class="entry-thumb-link">
+    <div class="entry-thumb" style="background-image: url();"></div>
+  </a>
+  <div class="entry-description">{{ .Description }}</div>
+</section>
 {{ end }} {{ end }}
