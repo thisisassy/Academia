@@ -1,7 +1,7 @@
 header {
   .head__inner {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 70px 0;
 
@@ -37,5 +37,10 @@ footer {
         font-size: 14px;
       }
     }
+  }
+  .out-content{
+      .copyright{
+          font-size: 14px;
+      }
   }
 }
