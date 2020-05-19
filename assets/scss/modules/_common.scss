@@ -14,4 +14,19 @@
         flex-flow: row wrap;
     }
 
+    .l-grid{
+        margin: 0 8px 0 0;
+        padding: 8px 16px;
+
+        .heading{
+            font-size: 16px;
+            color: $heading;
+        }
+    }
+    .column-06{
+        width: calc(100% - 50%);
+    }
+    .column-04{
+        width: calc(100% - 70%);
+    }
 }
