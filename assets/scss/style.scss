@@ -11,8 +11,8 @@ html,body{
 .l-content{
     width: auto;
     margin: 0 16px;
-    @media screen and (min-width: 1024px){
-        max-width: 1000px;
+    @include mq(){
+        width: 1000px;
         margin: auto;
     }
 }
@@ -24,7 +24,14 @@ header{
         align-items: center;
     }
 }
+.l-main__inner{
+    display: flex;
+    flex-flow: column;
+    @include mq(){
+        flex-flow: row wrap;
+    }
 
+}
 footer{
     .foot__inner{
         display: flex;

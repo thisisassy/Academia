@@ -1,3 +1,19 @@
 $heading: #333;
 $sub-text: #505050;
 $gray: #808080;
+
+$breakpoint-sm: 560px !default;
+$breakpoint-md: 960px !default;
+$breakpoint-lg: 1024px !default;
+
+$breakpoints: (
+    'sm': 'screen and (min-width: 560px)',
+    'md': 'screen and (min-width: 960px)',
+    'lg': 'screen and (min-width: 1024px)',
+) !default;
+
+@mixin mq($breakpoint: md){
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
