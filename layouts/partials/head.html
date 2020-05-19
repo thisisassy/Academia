@@ -6,7 +6,7 @@
 {{ end }}</title>
 <meta name="description" content="The website is Portfolio of Haruka Ashiuchi, a designer based in Japan.">
 <link rel="canonical" href="{{ .Permalink }}">
-{{ $style := resources.Get "scss/style.scss | toCss | minify | fingerprint "}}
+{{ $style := resources.Get "scss/style.scss" | toCss | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
