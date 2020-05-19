@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
+<html prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     {{- partial "head.html" . -}}
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="l-content">
-        {{- partial "header.html" . -}}
-        <main class="l-main">
-          <div class="l-main__inner">
-            {{ block "main" }} {{ end }}
+    <body>
+        <div id="wrapper">
+          <div class="l-content">
+            {{- partial "header.html" . -}}
+            <div id="content">
+            {{- block "main" . }}{{- end }}
+            </div>
+            {{- partial "footer.html" . -}}
           </div>
-          {{- partial "footer.html" . -}}
-        </main>
-      </div>
-    </div>
-  </body>
+        </div>
+    </body>
 </html>
