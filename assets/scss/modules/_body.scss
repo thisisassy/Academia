@@ -1,7 +1,7 @@
 header {
   .head__inner {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 70px 0;
 
@@ -22,6 +22,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 70px 0;
+    align-items: center;
   }
   .in-content {
     .logo {

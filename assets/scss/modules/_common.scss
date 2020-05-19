@@ -7,7 +7,7 @@
   }
 }
 
-.l-main__inner {
+#l-content__inner {
   display: flex;
   flex-flow: column;
   @include mq(md) {
