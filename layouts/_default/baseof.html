@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    {{- partial "head.html" . -}}
-    <body>
-        <div id="wrapper">
-            <div class="l-content">
-                {{- partial "header.html" . -}}
-            <div id="content">
-            {{- block "main" . }}{{- end }}
-            </div>
-            {{- partial "footer.html" . -}}
+  {{- partial "head.html" . -}}
+  <body>
+    <div id="wrapper">
+      <div class="l-content">
+        {{- partial "header.html" . -}}
+        <div id="content">
+          {{- block "main" . }}{{- end }}
         </div>
+        {{- partial "footer.html" . -}}
+      </div>
     </div>
-    </body>
+  </body>
 </html>

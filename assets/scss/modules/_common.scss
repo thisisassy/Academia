@@ -1,32 +1,33 @@
-.l-content{
+.l-content {
+  width: 1000px;
+  margin: auto;
+  @include mq(sm) {
     width: auto;
     margin: 0 16px;
-    @include mq(md){
-        width: 1000px;
-        margin: auto;
-    }
+  }
 }
 
-.l-main__inner{
-    display: flex;
-    flex-flow: column;
-    @include mq(md){
-        flex-flow: row wrap;
-    }
+.l-main__inner {
+  display: flex;
+  flex-flow: column;
+  @include mq(md) {
+    flex-flow: row wrap;
+  }
 
-    .l-grid{
-        margin: 0 8px 0 0;
-        padding: 8px 16px;
+  .l-grid {
+    margin: 0 8px 0 0;
+    padding: 8px 16px;
 
-        .heading{
-            font-size: 16px;
-            color: $heading;
-        }
+    .heading {
+      margin: 0 0 16px;
+      font-size: 16px;
+      color: $heading;
     }
-    .column-06{
-        width: calc(100% - 50%);
-    }
-    .column-04{
-        width: calc(100% - 70%);
-    }
+  }
+  .column-06 {
+    width: calc(100% - 50%);
+  }
+  .column-04 {
+    width: calc(100% - 70%);
+  }
 }

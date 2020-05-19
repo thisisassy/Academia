@@ -1,18 +1,21 @@
 <footer>
-    <div class="foot__inner">
-        <div class="in-content">
-            <div class="textContainer">
-                <p class="logo">{{ .Site.Params.author }}</p>
-                <p class="caption">is a designer based in Japan.</p>
-            </div>
-            <div class="linkContainer">
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </div>
-        </div>
-        <div class="out-content">
-            <p class="copyright"><span>&copy;</span> {{now.Year}} {{with .Site.Params.author}}{{.}}{{end}} All rights reserved.</p>
-        </div>
+  <div class="foot__inner">
+    <div class="in-content">
+      <div class="textContainer">
+        <p class="logo">{{ .Site.Params.author }}</p>
+        <p class="caption">is a designer based in Japan.</p>
+      </div>
+      <div class="linkContainer">
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </div>
     </div>
+    <div class="out-content">
+      <p class="copyright">
+        <span>&copy;</span> {{now.Year}} {{with
+        .Site.Params.author}}{{.}}{{end}} All rights reserved.
+      </p>
+    </div>
+  </div>
 </footer>
