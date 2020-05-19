@@ -2,7 +2,7 @@
     <div class="foot__inner">
         <div class="in-content">
             <div class="textContainer">
-                <p class="logo">{{ .Site.Title }}</p>
+                <p class="logo">{{ .Site.Params.author }}</p>
                 <p class="caption">is a designer based in Japan.</p>
             </div>
             <div class="linkContainer">
@@ -12,8 +12,7 @@
             </div>
         </div>
         <div class="out-content">
-            <p class="copyright"><span>&copy;</span> 2020 Haruka Ashiuchi</p>
+            <p class="copyright"><span>&copy;</span> {{now.Year}} {{wih .Site.Params.author}}{{.}}{{end}} All rights reserved.</p>
         </div>
-        
     </div>
 </footer>

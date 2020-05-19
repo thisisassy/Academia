@@ -1,0 +1,17 @@
+.l-content{
+    width: auto;
+    margin: 0 16px;
+    @include mq(){
+        width: 1000px;
+        margin: auto;
+    }
+}
+
+.l-main__inner{
+    display: flex;
+    flex-flow: column;
+    @include mq(){
+        flex-flow: row wrap;
+    }
+
+}
