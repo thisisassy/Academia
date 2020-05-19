@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="out-content">
-            <p class="copyright"><span>&copy;</span> {{now.Year}} {{wih .Site.Params.author}}{{.}}{{end}} All rights reserved.</p>
+            <p class="copyright"><span>&copy;</span> {{now.Year}} {{with .Site.Params.author}}{{.}}{{end}} All rights reserved.</p>
         </div>
     </div>
 </footer>
