@@ -1,6 +1,44 @@
-{{ range .Site.RegularPages }}
-<div>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-</div>
-    
-{{ end }}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title}}</title>
+    <meta name="description" content="The website is Portfolio of Haruka Ashiuchi, a designer based in Japan.">
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="l-content">
+            <header></header>
+            <div class="l-main">
+                <div class="l-grid column-06">
+                    <div class="profile">
+                        <h2>Profile</h2>
+                        <p>I'm a Designer for Web services and app focus on User experience and Interfaces.</p>
+                    </div>
+                </div>
+                <div class="l-grid column-04">
+                    <div class="profile-pic">
+                       <img src="" alt="profile">
+                    </div>
+                </div>
+                <div class="l-grid column-06">
+                    <div class="interest">
+                        <h2>Research Field / Interest</h2>
+                        <li>UX/UI</li>
+                    </div>
+                </div>
+                <div class="l-grid column-06">
+                    <div class="background">
+                        <h2>Background</h2>
+                        <li>Living in Nishinomiya, Hyogo, Japan.</li>
+                    </div>
+                </div>
+            </div>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>
