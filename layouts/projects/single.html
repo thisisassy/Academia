@@ -1,13 +1,3 @@
-<div id="wrapper">
-    <div class="l-content">
-        {{- partial "header.html" . -}}
-    <div id="content">
-    {{- block "main" . }}
-        {{ define "main" }}
-        {{ .Content }}
-            {{ end }}
-    {{- end }}
-    </div>
-    {{- partial "footer.html" . -}}
-</div>
-</div>
+{{ define "main" }}
+    {{ .Content }}
+{{ end }}
