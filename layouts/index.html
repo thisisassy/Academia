@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title}}</title>
-    <meta name="description" content="The website is Portfolio of Haruka Ashiuchi, a designer based in Japan.">
-    <link rel="stylesheet" href="">
-    <link rel="shortcut icon" href="">
+    {{- partial "head.html" . -}}
 </head>
 <body>
     <div id="wrapper">
         <div id="l-content">
-            <header></header>
+            {{- partial "header.html" . -}}
             <div class="l-main">
                 <div class="l-grid column-06">
                     <div class="profile">
@@ -37,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <footer></footer>
+            {{- partial "footer.html" . -}}
         </div>
     </div>
 </body>
