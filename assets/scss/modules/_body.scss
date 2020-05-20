@@ -5,9 +5,11 @@ header {
     align-items: center;
     padding: 70px 0;
 
-    .siteTitle {
+    .siteTitle-link {
       font-size: 18px;
       font-weight: 400;
+      text-decoration: none;
+      color: $heading;
     }
     .navbar {
       .list-item {
