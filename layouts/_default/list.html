@@ -1,7 +1,7 @@
 {{ define "main" }} {{ range .Pages }}
 <section class="archive-entry">
   <div class="archive-entry-header">
-    <div class="date"><time>{{ .PublishDate }}</time></div>
+    <div class="date"><time>{{ .PublishDate.Format "2006/01/02" }}</time></div>
     <h1 class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
   </div>
   <div class="categories">category</div>
