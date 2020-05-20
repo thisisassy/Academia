@@ -40,12 +40,8 @@
     </div>
     {{ with .Site.GetPage "/project" }}
     {{ range .GetPage }}
-      <li><a href="{{ .URL }}">{{ .Title }}</a></li>
-    {{ end }}
-    {{ end }}
-
-    {{ range .Site.GetPage "/project" }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
     {{ end }}
   </div>
 {{ end }}
