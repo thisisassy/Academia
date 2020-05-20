@@ -2,8 +2,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{end}}</title>
-  <meta
-    name="description" content="{{if .IsHome}}{{.Site.Params.description}}{{else}}{{.Description}}{{end}}" />
+  <meta name="description" content="{{ . }}" />
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed")}} 
   {{ $style := resources.Get "scss/style.scss" | toCSS $options }}

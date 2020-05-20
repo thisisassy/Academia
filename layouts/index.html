@@ -38,10 +38,9 @@
     <div class="l-grid column-12">
       <h2 class="headig">Projects</h2>
     </div>
-    {{ with .Site.GetPage "/project" }}
-    {{ range .GetPage }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
+    {{ range where .Site.Pages "Section" "projects" }}
+    <h1>{{ .Title }}</h1>
+      <p class="description">{{ .Summary }}</p>
     {{ end }}
   </div>
 {{ end }}
