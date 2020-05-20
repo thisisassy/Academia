@@ -34,6 +34,10 @@
   </div>
   <div class="l-box portfolio">
     <h2 class="headig">Projects</h2>
-    {{ with .Site.GetPage "/project" }}{{ .Title }}{{ end }}
+    {{ with .Site.GetPage "/project" }}
+    {{ range .GetPage }}
+      <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+    {{ end }}
+    {{ end }}
   </div>
 {{ end }}

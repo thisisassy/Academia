@@ -29,8 +29,10 @@
     }
     li{
       line-height: 1.6;
-      text-decoration: underline;
-      color: $link;
+      a{
+        text-decoration: underline;
+        color: $link;
+      }
     }
   }
   .column-06 {
