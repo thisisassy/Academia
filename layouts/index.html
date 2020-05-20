@@ -1,45 +1,60 @@
 {{ define "main" }}
 <div class="l-box about">
-    <div class="l-grid column-06">
-      <div class="profile">
-        <h2 class="heading">Profile</h2>
-        <p class="lead">
-          I'm a Designer for Web services and app focus on User
-          experience and Interfaces.
-        </p>
-      </div>
-    </div>
-    <div class="l-grid column-04">
-      <div class="profile-pic">
-        <img src="" alt="profile" />
-      </div>
-    </div>
-    <div class="l-grid column-06">
-      <div class="interest">
-        <h2 class="heading">Research Field / Interest</h2>
-        <li>UX/UI</li>
-        <li>Cognitive design</li>
-        <li>Sci-Fi Novels/Movies</li>
-      </div>
-    </div>
-    <div class="l-grid column-06">
-      <div class="background">
-        <h2 class="heading">Background</h2>
-        <li>Living in Nishinomiya, Hyogo, Japan.</li>
-        <li>Currently I am working as designer in <a href="https://hatenacorp.jp/">Hatena Co., Ltd.</a> since 2020</li>
-        <li>Mount inc. 2019</li>
-        <li>IMG SRC inc. 2018 - 2019</li>
-        <li>Graduated from <a href="https://www.kyoto-seika.ac.jp/">Kyoto Seika University</a>with a Bachelor Degree in Arts in 2018.</li>
-        <li>Born and raised in Nishinomiya city, Hyogo, Japan, 1994.</li>
-      </div>
+  <div class="l-grid column-06">
+    <div class="profile">
+      <h2 class="heading">Profile</h2>
+      <p class="lead">
+        I'm a Designer for Web services and app focus on User
+        experience and Interfaces.
+      </p>
     </div>
   </div>
-  <div class="l-box portfolio">
-    <div class="l-grid column-12">
-      <h2 class="headig">Projects</h2>
-      {{ range where .Site.Pages "Section" "projects" }}
-      <li class="project-list"><a href="{{ .URL }}">{{ .Title }}</a></li>
-      {{ end }}
+  <div class="l-grid column-04">
+    <div class="profile-pic">
+      <img src="" alt="profile" />
     </div>
   </div>
+  <div class="l-grid column-06">
+    <div class="interest">
+      <h2 class="heading">Research Field / Interest</h2>
+      <li>UX/UI</li>
+      <li>Cognitive design</li>
+      <li>Sci-Fi Novels/Movies</li>
+    </div>
+  </div>
+  <div class="l-grid column-06">
+    <div class="background">
+      <h2 class="heading">Background</h2>
+      <li>Living in Nishinomiya, Hyogo, Japan.</li>
+      <li>Currently I am working as designer in <a href="https://hatenacorp.jp/">Hatena Co., Ltd.</a> since 2020</li>
+      <li>Mount inc. 2019</li>
+      <li>IMG SRC inc. 2018 - 2019</li>
+      <li>Graduated from <a href="https://www.kyoto-seika.ac.jp/">Kyoto Seika University</a>with a Bachelor Degree in
+        Arts in 2018.</li>
+      <li>Born and raised in Nishinomiya city, Hyogo, Japan, 1994.</li>
+    </div>
+  </div>
+</div>
+<div class="l-box portfolio">
+  <div class="l-grid column-12">
+    <h2 class="heading">Projects</h2>
+    {{ range where .Site.Pages "Section" "projects" }}
+    <section class="project-content">
+      <a href="{{ .RelPermalink }}">
+        <h3 class="project-content-title">{{ .Title }}</h3>
+        <div class="project-content-caption">
+          <div class="project-content-body">
+            <p>{{ .Summary }}</p>
+          </div>
+          <div class="project-content-categories">category</div>
+        </div>
+        <div class="project-content-image">
+          <img src="" alt="">
+        </div>
+      </a>
+    </section>
+    <li class="project-list"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

@@ -15,7 +15,7 @@
     flex-flow: row wrap;
   }
 }
-  .l-grid {
+.l-grid {
     margin: 0 0 32px;
     padding: 8px 16px;
 
@@ -36,12 +36,12 @@
         color: $link;
       }
     }
-  }
-  .column-06 {
+}
+.column-06 {
     width: calc(100% - 55%);
-  }
-  .column-04 {
+}
+.column-04 {
     width: calc(100% - 70%);
-  }
+}
 
 
