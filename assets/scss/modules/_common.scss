@@ -53,18 +53,23 @@
     &:last-child{
       margin-bottom: none;
     }
-    a{
+    .project-content-item{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
       text-decoration: none;
     }
     .project-content-title{
+      width: 100%;
       margin: 0 0 8px;
       font-size: 16px;
       color: $link;
     }
     .project-content-body p{
+      margin: 0 0 8px;
       color: $sub-text;
     }
-    .project-categories{
+    .project-content-categories{
       border: 1px solid $link;
       border-radius: 4px;
       padding: 0.45em;

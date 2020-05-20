@@ -40,7 +40,7 @@
     <h2 class="heading">Projects</h2>
     {{ range where .Site.Pages "Section" "projects" }}
     <section class="project-content">
-      <a href="{{ .RelPermalink }}">
+      <a href="{{ .RelPermalink }}" class="project-content-item">
         <h3 class="project-content-title">{{ .Title }}</h3>
         <div class="project-content-caption">
           <div class="project-content-body">
