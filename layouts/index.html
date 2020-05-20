@@ -37,10 +37,9 @@
   <div class="l-box portfolio">
     <div class="l-grid column-12">
       <h2 class="headig">Projects</h2>
+      {{ range where .Site.Pages "Section" "projects" }}
+      <li class="project-list"><a href="{{ .URL }}">{{ .Title }}</a></li>
+      {{ end }}
     </div>
-    {{ range where .Site.Pages "Section" "projects" }}
-    <h1>{{ .Title }}</h1>
-      <p class="description">{{ .Summary }}</p>
-    {{ end }}
   </div>
 {{ end }}
