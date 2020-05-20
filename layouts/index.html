@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="about">
+<div class="l-box about">
     <div class="l-grid column-06">
       <div class="profile">
         <h2 class="heading">Profile</h2>
@@ -24,10 +24,16 @@
       <div class="background">
         <h2 class="heading">Background</h2>
         <li>Living in Nishinomiya, Hyogo, Japan.</li>
+        <li>Currently I am working as designer in <a href="https://hatenacorp.jp/">Hatena Co., Ltd.</a> since 2020</li>
+        <li>Mount inc. 2019</li>
+        <li>IMG SRC inc. 2018 - 2019</li>
+        <li>Graduated from <a href="https://www.kyoto-seika.ac.jp/">Kyoto Seika University</a>with a Bachelor Degree in Arts in 2018.</li>
+        <li>Born and raised in Nishinomiya city, Hyogo, Japan, 1994.</li>
       </div>
     </div>
   </div>
-  <div class="portfolio">
+  <div class="l-box portfolio">
     <h2 class="headig">Projects</h2>
+    {{ with .Site.GetPage "/project" }}{{ .Title }}{{ end }}
   </div>
 {{ end }}

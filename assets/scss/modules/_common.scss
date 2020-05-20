@@ -6,14 +6,14 @@
     margin: auto;
   }
 }
-
-#l-content__inner {
+.l-box{
   display: flex;
+  justify-content: space-between;
   flex-flow: column;
-  @include mq(md) {
+  @include mq(){
     flex-flow: row wrap;
   }
-
+}
   .l-grid {
     margin: 0 8px 0 0;
     padding: 8px 16px;
@@ -30,4 +30,5 @@
   .column-04 {
     width: calc(100% - 70%);
   }
-}
+
+
