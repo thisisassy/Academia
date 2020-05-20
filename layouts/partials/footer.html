@@ -6,9 +6,19 @@
         <p class="caption">is a designer based in Japan.</p>
       </div>
       <div class="linkContainer">
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        {{ $page := .}}
+        {{ range .Site.Menus.global_header.ByWeight }}
+            {{ $active := false}}
+            {{ $menu_page := $page.Site.GetPage .URL}}
+            {{ if $menu_page }}
+                {{ if eq $page $menu_page }}
+                    {{ $active = true }}
+                {{ else if and (eq $menu_page.IsHome false) ($menu_page.IsAncestor $page) }}
+                    {{ $active = true }}
+            {{ end }}
+        {{end}}
+        <li class="list-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{end}}
       </div>
     </div>
     <div class="out-content">

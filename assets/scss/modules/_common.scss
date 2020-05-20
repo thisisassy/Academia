@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   flex-flow: column;
+  margin: 0 0 40px;
   @include mq(){
     flex-flow: row wrap;
   }
@@ -22,6 +23,14 @@
       margin: 0 0 16px;
       font-size: 16px;
       color: $heading;
+    }
+    p{
+      line-height: 1.5;
+    }
+    li{
+      line-height: 1.6;
+      text-decoration: underline;
+      color: $link;
     }
   }
   .column-06 {
