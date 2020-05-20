@@ -1,10 +1,19 @@
 <header>
     <div class="head__inner">
-        <h1 class="siteTitle">{{ .Site.Title }}</h1>
+        <h1 class="siteTitle"><a href="/">{{ .Site.Title }}</a></h1>
         <nav class="navbar">
-            <ul>
-                <li class="nav-item"><a href="/">Home</a></li>
-                <li class="nav-item"><a href="">About</a></li>
+            <ul class="nav-list">
+                {{ $page := .}}
+                {{ range .Site.Menus.global_header.ByWeight }}
+                    {{ $active := false}}
+                    {{ $menu_page := $page.Site.GetPage .URL}}
+                    {{ if $menu_page }}
+                        {{ $active = true }}
+                    {{ else if and (eq $menu_page.IsHome false) ($menu_page.IsAncestor $page) }}
+                        {{ $active = true }}
+                {{ end }}
+                {{end}}
+                <li class="list-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
             </ul>
         </nav>
     </div>
