@@ -18,6 +18,8 @@
       <div class="interest">
         <h2 class="heading">Research Field / Interest</h2>
         <li>UX/UI</li>
+        <li>Cognitive design</li>
+        <li>Sci-Fi Novels/Movies</li>
       </div>
     </div>
     <div class="l-grid column-06">
@@ -33,11 +35,17 @@
     </div>
   </div>
   <div class="l-box portfolio">
-    <h2 class="headig">Projects</h2>
+    <div class="l-grid column-12">
+      <h2 class="headig">Projects</h2>
+    </div>
     {{ with .Site.GetPage "/project" }}
     {{ range .GetPage }}
       <li><a href="{{ .URL }}">{{ .Title }}</a></li>
     {{ end }}
+    {{ end }}
+
+    {{ range .Site.GetPage "/project" }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
   </div>
 {{ end }}

@@ -16,7 +16,7 @@
   }
 }
   .l-grid {
-    margin: 0 8px 0 0;
+    margin: 0 0 32px;
     padding: 8px 16px;
 
     .heading {
@@ -26,9 +26,11 @@
     }
     p{
       line-height: 1.5;
+      font-size: 14px;
     }
     li{
-      line-height: 1.6;
+      line-height: 1.5;
+      font-size: 14px;
       a{
         text-decoration: underline;
         color: $link;
@@ -36,7 +38,7 @@
     }
   }
   .column-06 {
-    width: calc(100% - 50%);
+    width: calc(100% - 55%);
   }
   .column-04 {
     width: calc(100% - 70%);
