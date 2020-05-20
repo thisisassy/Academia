@@ -29,7 +29,7 @@
   </div>
   <div class="portfolio">
     <h2 class="headig">Projects</h2>
-    {{ range .Site.GetPages "projects" }}
+    {{ with .Site.GetPages "projects" }}
       {{ .Title }}
     {{ end }}
   </div>
