@@ -3,9 +3,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
   <meta
-    name="description"
-    content="The website is Portfolio of Haruka Ashiuchi, a designer based in Japan."
-  />
+    name="description" content="{{if .IsHome}}{{.Site.Params.description}}{{else}}{{.Description}}{{end}}" />
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed")}} 
   {{ $style := resources.Get "scss/style.scss" | toCSS $options }}
