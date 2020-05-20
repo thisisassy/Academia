@@ -8,12 +8,14 @@
                     {{ $active := false}}
                     {{ $menu_page := $page.Site.GetPage .URL}}
                     {{ if $menu_page }}
-                        {{ $active = true }}
-                    {{ else if and (eq $menu_page.IsHome false) ($menu_page.IsAncestor $page) }}
-                        {{ $active = true }}
-                {{ end }}
+                        {{ if eq $page $menu_page }}
+                            {{ $active = true }}
+                        {{ else if and (eq $menu_page.IsHome false) ($menu_page.IsAncestor $page) }}
+                            {{ $active = true }}
+                    {{ end }}
                 {{end}}
                 <li class="list-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{end}}
             </ul>
         </nav>
     </div>
