@@ -49,7 +49,7 @@
         font-size: 16px;
         line-height: 1.6;
     }
-    ul{
+    ul,ol{
         margin-inline-start: 16px;
         li{
             line-height: 1.6;
@@ -63,10 +63,14 @@
         padding: 16px;
         border-radius: 4px;
     }
+    code{
+        border-radius: 2px;
+        padding: 0.25em;
+    }
     table{
         width: 100%;
         th,td{
-            padding: 0.25em;
+            padding: 0.45em;
         }
     }
     thead{
@@ -77,6 +81,9 @@
     tbody{
         td{
             background: #f5f5f5;
+            &:nth-child(2n){
+                background: #fff;
+            }
         }
     }
 }
