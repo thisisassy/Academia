@@ -73,6 +73,8 @@
       border: 1px solid $link;
       border-radius: 4px;
       padding: 0.45em;
+      display: inline-block;
+      color: $heading;
     }
   }
 }
