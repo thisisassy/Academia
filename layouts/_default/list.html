@@ -6,16 +6,12 @@
   </div>
   <div class="categories">category</div>
   <a href="{{ .Permalink }}" class="entry-thumb-link">
+    {{ $eyecatch_data := partial "function/get_eyecatch_image" . }}
+    {{ $if_eyecatch_data.eyecatch_data }}
     <div class="entry-thumb">
-      {{ $eyecatch_image := findRE "<img.*?src=([^>]*)?>" .Content 1 }}
-      {{ if ge (len $eyecatch_image ) 1 }}
-      {{ range $eyecatch_image }}
-      {{ . | safeHTML }}
-      {{ end }}
-      {{ else }}
-      <img src="/images/eyecatch.jpg">
-      {{ end}}</div>
+      <img class="entry-thumb" src="{{ $eyecatch_data.eyecatch.Permalink }}" alt="">
   </a>
-  <div class="entry-description">{{ .Description }}</div>
+  {{ end }}
+  <div class=" entry-description">{{ .Description }}</div>
 </section>
 {{ end }} {{ end }}
