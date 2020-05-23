@@ -6,7 +6,15 @@
   </div>
   <div class="categories">category</div>
   <a href="{{ .Permalink }}" class="entry-thumb-link">
-    <div class="entry-thumb" style="background-image: url();"></div>
+    <div class="entry-thumb">
+      {{ $eyecatch_image := findRE "<img.*?src=([^>]*)?>" .Content 1 }}
+      {{ if ge (len $eyecatch_image ) 1 }}
+      {{ range $eyecatch_image }}
+      {{ . | safeHTML }}
+      {{ end }}
+      {{ else }}
+      <img src="/images/eyecatch.jpg">
+      {{ end}}</div>
   </a>
   <div class="entry-description">{{ .Description }}</div>
 </section>

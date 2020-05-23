@@ -20,5 +20,7 @@ Academic portfolio theme for Designer or Student.
 
 ### Installation
 
-`git submodule add https://github.com/thisisassy/Academia.git themes/Academia`
+```
+git submodule add https://github.com/thisisassy/Academia.git themes/Academia
+```
 
