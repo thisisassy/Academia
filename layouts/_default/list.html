@@ -6,12 +6,9 @@
   </div>
   <div class="categories">category</div>
   <a href="{{ .Permalink }}" class="entry-thumb-link">
-    {{ $eyecatch_data := partial "function/get_eyecatch_image" . }}
-    {{ $if_eyecatch_data.eyecatch }}
     <div class="entry-thumb">
       <img class="entry-thumb" src="{{ $eyecatch_data.eyecatch.Permalink }}" alt="">
   </a>
-  {{ end }}
   <div class=" entry-description">{{ .Description }}</div>
 </section>
 {{ end }} {{ end }}
